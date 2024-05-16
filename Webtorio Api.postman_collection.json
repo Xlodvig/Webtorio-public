@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "191b0845-ac4f-41ca-8f51-97d3b990eb68",
+		"name": "Webtorio Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15656298"
+	},
+	"item": [
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "Get all items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/storage",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/storage/resource/90",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage",
+								"resource",
+								"90"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/storage/resources",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage",
+								"resources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get available Fuel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/storage/available-fuel",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage",
+								"available-fuel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceTypeId\": 1,\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/storage/add-resource",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage",
+								"add-resource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceTypeId\": 1,\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/storage/remove-resource",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"storage",
+								"remove-resource"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deposits",
+			"item": [
+				{
+					"name": "Get Deposit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deposits/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deposits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Deposits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deposits",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deposits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mine Resource",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/deposits/1/mine-resource",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deposits",
+								"1",
+								"mine-resource"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Slots",
+			"item": [
+				{
+					"name": "Get Slot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/slots/20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"slots",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Non Deposit Slots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/slots/all-non-deposit",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"slots",
+								"all-non-deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Building to Slot",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/slots/6/add-building/14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"slots",
+								"6",
+								"add-building",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Building From Slot",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/slots/6/remove-building",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"slots",
+								"6",
+								"remove-building"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buildings",
+			"item": [
+				{
+					"name": "Get Building",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buildings available to create",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/available-to-create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"available-to-create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stored/Extractive Building",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/stored/extractive",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"stored",
+								"extractive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stored/ManufactureBuilding",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/stored/manufacture",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"stored",
+								"manufacture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stored/GeneratorBuilding",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/stored/generator",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"stored",
+								"generator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Available Recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/13/available-recipes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"13",
+								"available-recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Building",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buildingTypeId\": 104\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/buildings/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Building switch On/Off",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/14/switch-on-off",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"14",
+								"switch-on-off"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Building Fuel",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/13/change-fuel/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"13",
+								"change-fuel",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select Recipe",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/buildings/14/select-recipe/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buildings",
+								"14",
+								"select-recipe",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://localhost:7273",
+			"type": "string"
+		}
+	]
+}
